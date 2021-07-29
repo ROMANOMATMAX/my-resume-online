@@ -49,38 +49,14 @@ const desplazarSeccionesUp = (clickNumber) => {
         case 1: //Debo iterar sobre arrySections y desplazar en 100vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar seccion 2");
         //Deberia desplazar fuera de pantalla la seccion 1 y hacer aparecer la seccion 2
-        section1.setAttribute('class', 'd-none');
-        section3.setAttribute('class', 'd-none')
-        section2.setAttribute('class', 'd-block move-inside-window')
-        imgSection1.setAttribute('class', 'd-none')
-        imgSection3.setAttribute('class', 'd-none')
-        imgSection2.setAttribute('class', 'd-block move-inside-window-img')
-        btnSection1.setAttribute('class', 'd-none');
-        btnSection3.setAttribute('class', 'd-none');
-        btnSection2.setAttribute('class', 'd-block move-inside-window-btn');
-        numberSection1.setAttribute('class', 'd-none');
-        numberSection3.setAttribute('class', 'd-none');
-        numberSection2.setAttribute('class', 'd-block move-inside-window-number');
-        cloudImg1.setAttribute('class', 'd-none');
-        cloudImg2.setAttribute('class', 'd-none');
-        cloudImg3.setAttribute('class', 'd-none');
-        cloudImg4.setAttribute('class', 'd-none');
-        cloudImg5.setAttribute('class', 'd-none');
+        hideAllClouds();
+        hidePortfolioWord();
+        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
         break;
         case 2: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
-        // console.log("deberia mostrar seccion 3");
-        section1.setAttribute('class', 'd-none');
-        section3.setAttribute('class', 'd-block move-inside-window')
-        section2.setAttribute('class', 'd-none')
-        imgSection1.setAttribute('class', 'd-none')
-        imgSection3.setAttribute('class', 'd-block move-inside-window-img')
-        imgSection2.setAttribute('class', 'd-none')
-        btnSection1.setAttribute('class', 'd-none');
-        btnSection3.setAttribute('class', 'd-block move-inside-window-btn');
-        btnSection2.setAttribute('class', 'd-none');
-        numberSection1.setAttribute('class', 'd-none');
-        numberSection3.setAttribute('class', 'd-block move-inside-window-number');
-        numberSection2.setAttribute('class', 'd-none');
+        hideAllClouds();
+        hidePortfolioWord()
+        modificarContenidoUp('Get In Touch', 'romanomatias99@gmail.com', '../img/background1.png', '03', './getInTouch.html')
         break;
         default: break;
     }
@@ -90,38 +66,15 @@ const desplazarSeccionesDown = (clickNumber) => {
     switch(clickNumber) {
         case 0: //Debo iterar sobre arrySections y desplazar en 100vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar la seccion 1");
-        section1.setAttribute('class', 'd-block move-inside-window');
-        section3.setAttribute('class', 'd-none')
-        section2.setAttribute('class', 'd-none')
-        imgSection1.setAttribute('class', 'd-block move-inside-window-img')
-        imgSection3.setAttribute('class', 'd-none')
-        imgSection2.setAttribute('class', 'd-none')
-        btnSection1.setAttribute('class', 'd-block move-inside-window-btn');
-        btnSection3.setAttribute('class', 'd-none');
-        btnSection2.setAttribute('class', 'd-none');
-        numberSection1.setAttribute('class', 'd-block move-inside-window-number');
-        numberSection3.setAttribute('class', 'd-none');
-        numberSection2.setAttribute('class', 'd-none');
-        cloudImg1.setAttribute('class', 'd-block move-der-izq-cloud');
-        cloudImg2.setAttribute('class', 'd-block move-der-izq-cloud');
-        cloudImg3.setAttribute('class', 'd-block move-der-izq-cloud');
-        cloudImg4.setAttribute('class', 'd-block move-der-izq-cloud');
-        cloudImg5.setAttribute('class', 'd-block move-der-izq-cloud');
+        showAllClouds();
+        showPortfolioWord();
+        modificarContenidoUp('Matias Romano', 'FullStack Web Developer', '../img/moon.svg', '01', './portfolio.html')
         break;
         case 1: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar la seccion 2");
-        section1.setAttribute('class', 'd-none');
-        section3.setAttribute('class', 'd-none')
-        section2.setAttribute('class', 'd-block move-inside-window')
-        imgSection1.setAttribute('class', 'd-none')
-        imgSection3.setAttribute('class', 'd-none')
-        imgSection2.setAttribute('class', 'd-block move-inside-window-img')
-        btnSection1.setAttribute('class', 'd-none');
-        btnSection3.setAttribute('class', 'd-none');
-        btnSection2.setAttribute('class', 'd-block move-inside-window-btn');
-        numberSection1.setAttribute('class', 'd-none');
-        numberSection3.setAttribute('class', 'd-none');
-        numberSection2.setAttribute('class', 'd-block move-inside-window-number');
+        hideAllClouds();
+        hidePortfolioWord();
+        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
         break;
         default: break;
     }
@@ -163,4 +116,57 @@ function checkKey(e) {
             desplazarSeccionesUp(clickAccount) 
         }
     }
+}
+
+
+const hideAllClouds = () => {
+    cloudImg1.setAttribute('class', 'd-none');
+    cloudImg2.setAttribute('class', 'd-none');
+    cloudImg3.setAttribute('class', 'd-none');
+    cloudImg4.setAttribute('class', 'd-none');
+    cloudImg5.setAttribute('class', 'd-none');
+}
+
+const showAllClouds = () => {
+    cloudImg1.setAttribute('class', 'd-block move-der-izq-cloud');
+    cloudImg2.setAttribute('class', 'd-block move-der-izq-cloud');
+    cloudImg3.setAttribute('class', 'd-block move-der-izq-cloud');
+    cloudImg4.setAttribute('class', 'd-block move-der-izq-cloud');
+    cloudImg5.setAttribute('class', 'd-block move-der-izq-cloud');
+}
+
+const hidePortfolioWord = () => {
+    imgSection1.childNodes[3].setAttribute('class', 'd-none')
+}
+
+const showPortfolioWord = () => {
+    imgSection1.childNodes[3].setAttribute('class', 'd-block portfolio-title-style font-color-red')
+}
+
+const modificarContenidoUp = (title, description, srcImg, numberSection, newHref) => {
+    section1.setAttribute('class', 'move-outside-window');
+    //cambio el titulo de la seccion
+    section1.childNodes[1].innerHTML = `${title}`
+    setTimeout(() => {
+        section1.setAttribute('class', 'move-inside-window')
+    }, 100)
+    //sacamos la palabra portafolio
+    imgSection1.setAttribute('class', 'move-outside-window-img')
+    imgSection1.childNodes[1].setAttribute('src', `${srcImg}`)
+    setTimeout(() => {
+        imgSection1.setAttribute('class', 'move-inside-window-img')
+    }, 100)
+    console.log(btnSection1.childNodes[1]);
+    btnSection1.setAttribute('class', 'move-outside-window-btn');
+    btnSection1.childNodes[1].innerHTML=`${description}`
+    btnSection1.childNodes[3].setAttribute('href', `${newHref}`)
+    setTimeout(() => {
+        btnSection1.setAttribute('class', 'move-inside-window-btn')
+    }, 100)
+    numberSection1.setAttribute('class', 'move-outside-window-number');
+    console.log(numberSection1.childNodes[1]);
+    numberSection1.childNodes[1].innerHTML = `${numberSection}`
+    setTimeout(() => {
+        numberSection1.setAttribute('class', 'move-inside-window-number')
+    }, 100)
 }

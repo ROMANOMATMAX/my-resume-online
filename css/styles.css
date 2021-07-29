@@ -85,6 +85,16 @@ header .color-gray-white {
     animation-fill-mode:both;  
 }
 
+.move-outside-window {
+    animation-name: mover-abajo-arriba-der-izq;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:both;  
+}
+
 .move-inside-window-img {
     animation-name: mover-arriba-abajo-der-izq;
     animation-duration: 1.5s;
@@ -95,8 +105,28 @@ header .color-gray-white {
     animation-fill-mode:both;  
 }
 
+.move-outside-window-img {
+    animation-name: mover-abajo-arriba-izq-der;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:both;  
+}
+
 .move-inside-window-number{
-    animation-name: mover-abajo-arriba-der-izq;
+    animation-name: mover-abajo-arriba-der-izq-number;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:both;
+}
+
+.move-outside-window-number{
+    animation-name: mover-arriva-abajo-izq-der-number;
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
@@ -106,7 +136,17 @@ header .color-gray-white {
 }
 
 .move-inside-window-btn{
-    animation-name: mover-abajo-arriba-izq-der;
+    animation-name: mover-abajo-arriba-izq-der-btn;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode:both;
+} 
+
+.move-outside-window-btn{
+    animation-name: mover-arriba-abajo-der-izq-btn;
     animation-duration: 1.5s;
     animation-timing-function: ease;
     animation-delay: 0s;
@@ -271,6 +311,35 @@ img {
 
 }
 
+@keyframes mover-abajo-arriba-der-izq {
+    0% { transform: translate(0, 0);
+         opacity: 0;
+        }
+    100% { transform: translate(-5vw, -20vh); 
+           opacity: 1;
+    }
+
+}
+
+@keyframes mover-abajo-arriba-der-izq-number {
+    0% { transform: translate(100vw, 100vh);
+        opacity: 0;
+       }
+   100% { transform: translate(95vw, 75vh); 
+          opacity: 1;
+   }
+}
+
+@keyframes mover-arriva-abajo-izq-der-number {
+    0% { transform: translate(0, 0);
+        opacity: 0;
+       }
+   100% { transform: translate(-100vw, -100vh); 
+          opacity: 1;
+   }
+}
+
+
 @keyframes mover-arriba-abajo-der-izq {
     0% { transform: translate(0, -1000px);
          opacity: 0;
@@ -281,7 +350,17 @@ img {
 
 }
 
+
 @keyframes mover-abajo-arriba-izq-der {
+    0% { transform: translate(0, 0);
+        opacity: 0;
+       }
+   100% { transform: translate(0, -1000px); 
+          opacity: 1;
+   }
+}
+
+@keyframes mover-abajo-arriba-izq-der-btn {
     0% { transform: translate(0px, 100vh);
         opacity: 0;
        }
@@ -290,14 +369,23 @@ img {
    }
 }
 
-@keyframes mover-abajo-arriba-der-izq {
+@keyframes mover-arriba-abajo-der-izq-btn {
+    0% { transform: translate(0, 0);
+        opacity: 0;
+       }
+   100% { transform: translate(0, -100vh); 
+          opacity: 1;
+   }
+}
+
+/* @keyframes mover-abajo-arriba-der-izq {
     0% { transform: translate(100vw, 100vh);
         opacity: 0;
        }
    100% { transform: translate(95vw, 75vh); 
           opacity: 1;
    }
-}
+} */
 
 @keyframes mover-boton-hacia-abajo {
     0% { transform: translate(-20px, -20px);
