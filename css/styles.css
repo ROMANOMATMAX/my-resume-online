@@ -185,6 +185,16 @@ header .color-gray-white {
     animation-fill-mode:both;
 } 
 
+.appear-disappear-btn{
+    animation-name: button-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode:both;
+} 
+
 /* Contenedor de botones */
 .contenedor-botones {
     position: absolute;
@@ -197,15 +207,23 @@ header .color-gray-white {
 }
 
 #btnMoveSection2 {
+    background: transparent;
+    border: none;
+    color: #ccd6f6;
+    font-size: 2rem;
     position: absolute;
-    bottom: 100px;
-    right: 50vw;
+    bottom: 50px;
+    right: 45vw;
 }
 
 #btnMoveSection1 {
+    background: transparent;
+    border: none;
+    color: #ccd6f6;
+    font-size: 2rem;
     position: absolute;
-    bottom: 0px;
-    right: 50vw;
+    bottom: 1vh;
+    right: 45vw;
 }
 
 #section-1, #section-2, #section-3 {
@@ -224,8 +242,6 @@ header .color-gray-white {
 #number-section-1, #number-section-2, #number-section-3 {
     position: absolute;
     transition: all 0.5s ease;
-    /* bottom: 0;
-    right: 0; */
 }
 
 #btn-description-section-1, #btn-description-section-2, #btn-description-section-3 {
@@ -238,6 +254,7 @@ header .color-gray-white {
     position: absolute;
     height: 20vh;
     right:5vw;
+    top: 0;
 }
 
 #img-cloud-section-1 {
@@ -413,3 +430,76 @@ img {
           opacity: 1;
    }
 }
+
+@keyframes button-animation {
+    0% {
+        opacity: 0;
+       }
+   100% {
+          opacity: 1;
+   }
+}
+
+@media (max-width: 768px) {
+    
+    #img-cloud-section-2 {
+        position: absolute;
+        width: 30vw;
+        right: 5vw;
+        right: 15vw;
+        top: 10vh;
+    }
+
+    #img-cloud-section-1 {
+        position: absolute;
+        width: 30vw;
+        top: 15vh;
+        right: 60vw;
+    }
+
+    #img-cloud-section-3 {
+        position: absolute;
+        width: 30vw;
+        top: 25vh;
+        right: 15vw;
+    }
+    #img-cloud-section-4 {
+        position: absolute;
+        width: 30vw;
+        top: 30vh;
+        right: 55vw;
+    }
+
+    #img-cloud-section-5 {
+        position: absolute;
+        width: 30vw;
+        top: 40vh;
+        right: 30vw;
+    }
+    #img-section-1, #img-section-2, #img-section-3 {
+        position: absolute;
+        height: 50vh;
+        width: 50vw;
+        right: 20vw;
+        transition: all 0.5s ease;
+    }
+    .font-size-title {
+        font-size: 1.6rem;
+    }
+    #section-1, #section-2, #section-3 {
+        position: absolute;
+        transition: all 0.5s ease;
+        width: auto;
+        bottom: 45vh;
+    }
+    .font-size-subtitle{
+        font-size: 1rem;
+    }
+    #btn-description-section-1, #btn-description-section-2, #btn-description-section-3 {
+        position: absolute;
+        width: auto;
+        transition: all 0.5s ease;
+        top: 2vh;
+    }
+    
+  }
