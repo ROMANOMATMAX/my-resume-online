@@ -10,14 +10,16 @@ const imgSection3 = document.getElementById('img-section-3')
 const btnSection1 = document.getElementById('btn-description-section-1');
 const btnSection2 = document.getElementById('btn-description-section-2');
 const btnSection3 = document.getElementById('btn-description-section-3');
-// const numberSection1= document.getElementById('number-section-1');
+const numberSection1= document.getElementById('number-section-1');
 const numberSection2= document.getElementById('number-section-2');
 const numberSection3= document.getElementById('number-section-3');
-// const cloudImg1 = document.getElementById('img-cloud-section-1');
-// const cloudImg2 = document.getElementById('img-cloud-section-2');
-// const cloudImg3 = document.getElementById('img-cloud-section-3');
-// const cloudImg4 = document.getElementById('img-cloud-section-4');
-// const cloudImg5 = document.getElementById('img-cloud-section-5');
+const cloudImg1 = document.getElementById('img-cloud-section-1');
+const cloudImg2 = document.getElementById('img-cloud-section-2');
+const cloudImg3 = document.getElementById('img-cloud-section-3');
+const cloudImg4 = document.getElementById('img-cloud-section-4');
+const cloudImg5 = document.getElementById('img-cloud-section-5');
+const nav = document.getElementById('nav-list');
+const menu = document.getElementById('menu');
 console.log(imgSection1, imgSection2, imgSection3);
 let clickAccount = 0;
 const moveSectionUp = () => {
@@ -49,12 +51,12 @@ const desplazarSeccionesUp = (clickNumber) => {
         case 1: //Debo iterar sobre arrySections y desplazar en 100vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar seccion 2");
         //Deberia desplazar fuera de pantalla la seccion 1 y hacer aparecer la seccion 2
-        // hideAllClouds();
+        hideAllClouds();
         hidePortfolioWord();
         modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
         break;
         case 2: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
-        // hideAllClouds();
+        hideAllClouds();
         hidePortfolioWord()
         modificarContenidoUp('Get In Touch', 'romanomatias99@gmail.com', '../img/background1.png', '03', './getInTouch.html')
         break;
@@ -66,23 +68,38 @@ const desplazarSeccionesDown = (clickNumber) => {
     switch(clickNumber) {
         case 0: //Debo iterar sobre arrySections y desplazar en 100vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar la seccion 1");
-        // showAllClouds();
+        showAllClouds();
         showPortfolioWord();
         modificarContenidoUp('Matias Romano', 'FullStack Web Developer', '../img/moon.svg', '01', './portfolio.html')
         break;
         case 1: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar la seccion 2");
-        // hideAllClouds();
+        hideAllClouds();
         hidePortfolioWord();
         modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
         break;
         default: break;
     }
 }
-
+let menuClickReminder = false;
+const mostrarMenu = () => {
+    console.log("Apretaste el menu");
+    //modificamos de true a false o de false a true
+    menuClickReminder = !menuClickReminder;
+    //tenes que mostrar el logo de cerrar menu
+    if(menuClickReminder){//Muestro el logo de cerrar menu
+        menu.setAttribute('class', 'fas fa-times');
+        //Mostrar el nav y modifica estilo
+        nav.setAttribute('class', 'd-block nav justify-content-end align-items-center nav-styles-sm')
+    }else{//Muestro el logo de abrir menu
+        menu.setAttribute('class', 'fas fa-bars');
+        nav.setAttribute('class', 'no-mostrar')
+    }
+}
 
 btnToMoveSectionUp.addEventListener('click', moveSectionUp)
 btnToMoveSectionDown.addEventListener('click', moveSectionDown)
+menu.addEventListener('click', mostrarMenu)
 
 
 //Event Handler up arrow and down arrow
@@ -119,21 +136,21 @@ function checkKey(e) {
 }
 
 
-// const hideAllClouds = () => {
-//     cloudImg1.setAttribute('class', 'd-none');
-//     cloudImg2.setAttribute('class', 'd-none');
-//     cloudImg3.setAttribute('class', 'd-none');
-//     cloudImg4.setAttribute('class', 'd-none');
-//     cloudImg5.setAttribute('class', 'd-none');
-// }
+const hideAllClouds = () => {
+    cloudImg1.setAttribute('class', 'move-izq-der-cloud');
+    cloudImg2.setAttribute('class', 'move-izq-der-cloud');
+    cloudImg3.setAttribute('class', 'move-izq-der-cloud');
+    cloudImg4.setAttribute('class', 'move-izq-der-cloud');
+    cloudImg5.setAttribute('class', 'move-izq-der-cloud');
+}
 
-// const showAllClouds = () => {
-//     cloudImg1.setAttribute('class', 'd-block move-der-izq-cloud');
-//     cloudImg2.setAttribute('class', 'd-block move-der-izq-cloud');
-//     cloudImg3.setAttribute('class', 'd-block move-der-izq-cloud');
-//     cloudImg4.setAttribute('class', 'd-block move-der-izq-cloud');
-//     cloudImg5.setAttribute('class', 'd-block move-der-izq-cloud');
-// }
+const showAllClouds = () => {
+    cloudImg1.setAttribute('class', 'move-der-izq-cloud');
+    cloudImg2.setAttribute('class', 'move-der-izq-cloud');
+    cloudImg3.setAttribute('class', 'move-der-izq-cloud');
+    cloudImg4.setAttribute('class', 'move-der-izq-cloud');
+    cloudImg5.setAttribute('class', 'move-der-izq-cloud');
+}
 
 const hidePortfolioWord = () => {
     imgSection1.childNodes[3].setAttribute('class', 'd-none')
@@ -170,3 +187,9 @@ const modificarContenidoUp = (title, description, srcImg, numberSection, newHref
         numberSection1.setAttribute('class', 'move-inside-window-number')
     }, 100)
 }
+
+
+const modificandoElementoSeleccionado = () => {
+    console.log("Hola mundo click education");
+}
+btnEducation1.addEventListener('click', modificandoElementoSeleccionado)
