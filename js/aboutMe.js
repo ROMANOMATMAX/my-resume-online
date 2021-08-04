@@ -9,6 +9,7 @@ const educationData2 = document.getElementById('education-data-2');
 const educationData3 = document.getElementById('education-data-3');
 const experienceData1 = document.getElementById('experience-data-1');
 const experienceData2 = document.getElementById('experience-data-2');
+const header = document.getElementById('header-tag');
 
 const modificandoElementoSeleccionado = (e) => {
     console.log(e.target.id);
@@ -175,7 +176,6 @@ window.addEventListener('scroll', function () {
   });
   arryBar.forEach(bar => {
     if(bar.getBoundingClientRect().top < window.innerHeight){
-      console.log(bar.id);
       switch(bar.id){
         case 'barra-1': bar.classList.add('load-bar-1');break;     
         case 'barra-2': bar.classList.add('load-bar-2');break;
@@ -192,7 +192,40 @@ window.addEventListener('scroll', function () {
   });
 })
 
-
+var lastScrollTop = 0;
+//Funcion debounce
+function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate && !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+};
+//Funcion que procesa el scroll
+const scrollingDirectionDetect = () => { // or window.addEventListener("scroll"....
+    var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    if (st > lastScrollTop){
+       // downscroll code
+       console.log('Hide the header');
+       header.classList.remove('mostrar-header')
+       header.classList.add('ocultar-header')
+    } else {
+       // upscroll code
+       console.log('show Header');
+       header.classList.remove('ocultar-header')
+       header.classList.add('mostrar-header')
+    }
+    lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+ }
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+window.addEventListener("scroll", debounce(scrollingDirectionDetect, 250));
 
 btnEducation1.addEventListener('click', modificandoElementoSeleccionado);
 btnEducation2.addEventListener('click', modificandoElementoSeleccionado);

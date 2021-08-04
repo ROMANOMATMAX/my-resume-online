@@ -53,12 +53,12 @@ const desplazarSeccionesUp = (clickNumber) => {
         //Deberia desplazar fuera de pantalla la seccion 1 y hacer aparecer la seccion 2
         hideAllClouds();
         hidePortfolioWord();
-        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
+        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './html/aboutMe.html')
         break;
         case 2: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
         hideAllClouds();
         hidePortfolioWord()
-        modificarContenidoUp('Get In Touch', 'romanomatias99@gmail.com', '../img/background1.png', '03', './getInTouch.html')
+        modificarContenidoUp('Get In Touch', 'romanomatias99@gmail.com', '../img/background1.png', '03', './html/getInTouch.html')
         break;
         default: break;
     }
@@ -70,13 +70,13 @@ const desplazarSeccionesDown = (clickNumber) => {
         // console.log("deberia mostrar la seccion 1");
         showAllClouds();
         showPortfolioWord();
-        modificarContenidoUp('Matias Romano', 'FullStack Web Developer', '../img/moon.svg', '01', './portfolio.html')
+        modificarContenidoUp('Matias Romano', 'FullStack Web Developer', '../img/moon.svg', '01', './html/portfolio.html')
         break;
         case 1: //Debo iterar sobre arrySections y desplazar en 200vh agregando una clase primero borrar toda otra clase
         // console.log("deberia mostrar la seccion 2");
         hideAllClouds();
         hidePortfolioWord();
-        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './aboutMe.html')
+        modificarContenidoUp('About Me', 'I am a full stack web developer. My first approach to programming was...', '../img/fotoPerfil.png', '02', './html/aboutMe.html')
         break;
         default: break;
     }
