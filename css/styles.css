@@ -504,6 +504,8 @@ img {
     height: 10px;
     border: 1px solid gray;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
 }
 
 .fill-color{
@@ -575,8 +577,8 @@ img {
 }
 /* .photo:hover img{
     opacity: 1;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
 } */
 .adaptar-imagen-dev {
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
@@ -608,13 +610,20 @@ img {
 .about-me-data{
     display: none;
 }
-
+.about-me-bg-lg {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,25,47,0.8384395994726015) 0%, rgba(0,212,255,1) 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
 .about-me-data-lg{
     display: block;
 }
 
 .body-about-me {
-    background-color: #0a192f;
+    /* background-color: #0a192f; */
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
@@ -1149,6 +1158,20 @@ img {
     object-fit: cover;
 }
 
+.work-experience-bg {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,25,47,0.8384395994726015) 0%, rgba(0,212,255,1) 100%);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+.work-experience-container {
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
   @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -1166,6 +1189,55 @@ img {
    100% { transform: translate(0, 0);
           opacity: 1;
    }
+}
+
+@keyframes mover-tag-html-arriba-abajo {
+    0% { transform: translate(0, 0) rotateY(0deg);
+        opacity: 0;
+       }
+   100% { transform: translate(0, 60px) rotateY(360deg);;
+          opacity: 1;
+   }
+
+}
+.tag-1{
+    left: 5%;    
+}
+.tag-2{
+    left: 15%;
+    top: 40px;
+}
+.tag-3{
+    top: 140px;
+    left: 15%;
+}
+.tag-4{
+    top: 100px;
+    left: 5%;
+}
+.tag-5{
+    left: 80%;
+}
+.tag-6 {
+    top: 40px;
+    left: 95%;
+}
+.tag-7 {
+    left: 80%;
+    top: 100px;
+}
+.tag-8 {
+    left: 95%;
+    top: 140px;
+}
+.tag-html-animation{
+    animation-name: mover-tag-html-arriba-abajo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode:both;
 }
 .mover-link-1 {
     animation-name: mover-link-1-hacia-arriba;
@@ -1478,6 +1550,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-proy{
     object-fit: contain;
+}
+
+.perfil-img-animation {
+    position: absolute;
+    z-index: 10;
+    color: #8892b0;
+    font-size: 1.5rem;
 }
   @media (max-width: 1440px) {
     .project-image {
