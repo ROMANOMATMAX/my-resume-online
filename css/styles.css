@@ -1162,7 +1162,7 @@ img {
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,25,47,0.8384395994726015) 0%, rgba(0,212,255,1) 100%);
     clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
-    height: 550px;
+    height: 700px;
     display: flex;
     align-items: center;
 }
@@ -1533,8 +1533,8 @@ h1, h2, h3, h4, h5, h6 {
     transition: all 0.5s ease;
 }
 
-.img-background-li-item:hover {
-    opacity: 0.8;
+.img-background-li-item.img-proy:hover{
+    opacity: 1;
 }
 
 .estilo-li {
@@ -1550,6 +1550,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-proy{
     object-fit: contain;
+    opacity: 0.4;
+}
+.container-img-card:hover .table-img-styles {
+    transform: scale(1.1) rotate(2deg);
+}
+
+.container-img-card:hover > .details {
+    width: 100%;
+    left: 0;
+}
+
+.details{
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    margin: auto;
+    transition: left .3s;
+    background: #000;
+    opacity: 0.6;
+    color: #fff;
+    padding: 10px;
+    width: 0;
+    font-size: .9rem;
 }
 
 .perfil-img-animation {
@@ -1557,6 +1584,26 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 10;
     color: #8892b0;
     font-size: 1.5rem;
+}
+.container-img-card {
+    overflow: hidden;
+}
+.table-img-container {
+    height: 250px;
+    width: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform .2s;
+    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+}
+.table-img-styles {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .2s;
 }
   @media (max-width: 1440px) {
     .project-image {
