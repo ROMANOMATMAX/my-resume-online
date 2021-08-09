@@ -208,7 +208,7 @@ header .color-gray-white {
 /* Barras de cargar */
 .load-bar-1{
     animation-name: cargar-barra-uno;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -218,7 +218,7 @@ header .color-gray-white {
 
 .load-bar-2 {
     animation-name: cargar-barra-dos;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -228,7 +228,7 @@ header .color-gray-white {
 
 .load-bar-3 {
     animation-name: cargar-barra-tres;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -237,7 +237,7 @@ header .color-gray-white {
 }
 .load-bar-4 {
     animation-name: cargar-barra-cuatro;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -246,7 +246,7 @@ header .color-gray-white {
 }
 .load-bar-5 {
     animation-name: cargar-barra-cinco;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -255,7 +255,7 @@ header .color-gray-white {
 }
 .load-bar-6 {
     animation-name: cargar-barra-seis;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -264,7 +264,7 @@ header .color-gray-white {
 }
 .load-bar-7 {
     animation-name: cargar-barra-siete;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -273,7 +273,7 @@ header .color-gray-white {
 }
 .load-bar-8 {
     animation-name: cargar-barra-ocho;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -283,7 +283,7 @@ header .color-gray-white {
 
 .load-bar-9 {
     animation-name: cargar-barra-nueve;
-    animation-duration: 1.5s;
+    animation-duration: 1.8s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -293,7 +293,7 @@ header .color-gray-white {
 
 .card-animation{
     animation-name: moverImagenLeftToRight;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -302,7 +302,7 @@ header .color-gray-white {
 }
 .card-animation-y{
     animation-name: mover;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
     animation-timing-function: ease;
     animation-delay: 0s;
     animation-iteration-count: 1;
@@ -589,7 +589,7 @@ img {
 .adaptar-imagen-dev:hover {
     opacity: 0.5;
 }
-.photo img {
+.animacion-foto-perfil {
     transition: all 0.5s ease;
     animation-name: agrandar-imagen;
     animation-duration: 0.5s;
@@ -650,7 +650,7 @@ img {
     padding-top: 13vh;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
     background-image: linear-gradient(to right top, #a4a9b0, #b2bdc1, #c4d1d0, #dae4de, #f3f6ed);
-    height: 60vh;
+    height: 600px;
     display: flex;
     align-items: center;
 }
@@ -1620,7 +1620,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: -100%;
     margin: auto;
-    transition: left .3s;
+    transition: left .5s;
     background: rgb(2,0,36);
     background-image: linear-gradient(to right top, #a4a9b0, #b2bdc1, #c4d1d0, #dae4de, #f3f6ed);
     opacity: 0.9;
@@ -1724,6 +1724,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media (max-width: 768px) {
+    header {
+        /* background-color: #0a192f; */
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        position: relative;
+        top: 0;
+        left: 0;
+        background: transparent;
+        right: 0;
+        width: 100vw;
+        z-index: 999;
+    }
     .square-2 {
         transform: translate(0, 100px) rotate( 
             -20deg
@@ -1898,7 +1910,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 200px;
     }
     .presentation-bg {
-        padding-top: 13vh;
+        padding-top: 0;
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
         background-image: linear-gradient(to right top, #a4a9b0, #b2bdc1, #c4d1d0, #dae4de, #f3f6ed);
         height: 70vh;
@@ -1924,6 +1936,29 @@ h1, h2, h3, h4, h5, h6 {
         color: #353945;
         font-size: 13px;
         font-weight: 400;
+    }
+    .details {
+        /* clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); */
+        margin: 0;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        margin: auto;
+        transition: left .5s;
+        background: rgb(2,0,36);
+        background-image: linear-gradient(to right top, #a4a9b0, #b2bdc1, #c4d1d0, #dae4de, #f3f6ed);
+        opacity: 0.9;
+        color: #fff;
+        padding: 10px;
+        width: 0;
+        font-size: .9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+        left: 0;
     }
   }
 @media (max-width: 576px) {

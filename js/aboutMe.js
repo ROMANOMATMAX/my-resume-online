@@ -12,6 +12,7 @@ const experienceData2 = document.getElementById('experience-data-2');
 const header = document.getElementById('header-tag');
 const menu = document.getElementById('menu');
 const nav = document.getElementById('nav-list');
+const imgPerfil = document.getElementById('dev-img');
 
 const modificandoElementoSeleccionado = (e) => {
     console.log(e.target.id);
@@ -196,29 +197,33 @@ const changeWhatDataIsShownAsExperience = (position) => {
 function cambiarEstilosSegunPantalla() {
     const skillSection = document.getElementById('skills-section');
     if(!window.matchMedia("(max-width: 768px)").matches) {//Si la pantalla es mayor a 768
+        btnEducation1.classList.add('selected-btn-education')
+        btnExperience1.classList.add('selected-btn-education')
        //cambio el estilo a la seccion skills
        skillSection.classList.remove('seccion-animada-y')
        skillSection.classList.add('card-animation')
        const listOfBars = document.getElementsByClassName('fill-color');
        let arryBar = [...listOfBars];
-       arryBar.forEach(bar => {
-           switch(bar.id){
-            case 'barra-1': bar.classList.add('load-bar-1');break;     
-            case 'barra-2': bar.classList.add('load-bar-2');break;
-            case 'barra-3': bar.classList.add('load-bar-3');break;
-            case 'barra-4': bar.classList.add('load-bar-4');break;
-            case 'barra-5': bar.classList.add('load-bar-5');break; 
-            case 'barra-6': bar.classList.add('load-bar-6');break;
-            case 'barra-7': bar.classList.add('load-bar-7');break;
-            case 'barra-8': bar.classList.add('load-bar-8');break;
-            case 'barra-9': bar.classList.add('load-bar-9');break;
-            default: break;
-        }
-       })
+    //    arryBar.forEach(bar => {
+    //        switch(bar.id){
+    //         case 'barra-1': bar.classList.add('load-bar-1');break;     
+    //         case 'barra-2': bar.classList.add('load-bar-2');break;
+    //         case 'barra-3': bar.classList.add('load-bar-3');break;
+    //         case 'barra-4': bar.classList.add('load-bar-4');break;
+    //         case 'barra-5': bar.classList.add('load-bar-5');break; 
+    //         case 'barra-6': bar.classList.add('load-bar-6');break;
+    //         case 'barra-7': bar.classList.add('load-bar-7');break;
+    //         case 'barra-8': bar.classList.add('load-bar-8');break;
+    //         case 'barra-9': bar.classList.add('load-bar-9');break;
+    //         default: break;
+    //     }
+    //    })
     }else {//Si es menor o igual
         console.log('detecto pantalla chica');
         skillSection.classList.remove('card-animation')
         skillSection.classList.add('seccion-animada-y')
+        btnEducation1.classList.add('selected-btn-education-sm')
+        btnExperience1.classList.add('selected-btn-education-sm')
     }
 }
 
@@ -238,6 +243,9 @@ console.log(arry);
 window.addEventListener('scroll', function () {
   // console.log(window.innerHeight);
   // console.log(firstCard.getBoundingClientRect().top);
+  if(imgPerfil.getBoundingClientRect().top < window.innerHeight) {
+      imgPerfil.classList.add('animacion-foto-perfil');
+  }
   arry.forEach(card => {
     if(card.getBoundingClientRect().top < window.innerHeight){
       card.classList.add("card-animation");
