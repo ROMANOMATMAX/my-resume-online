@@ -10,78 +10,152 @@ const educationData3 = document.getElementById('education-data-3');
 const experienceData1 = document.getElementById('experience-data-1');
 const experienceData2 = document.getElementById('experience-data-2');
 const header = document.getElementById('header-tag');
+const menu = document.getElementById('menu');
+const nav = document.getElementById('nav-list');
 
 const modificandoElementoSeleccionado = (e) => {
     console.log(e.target.id);
-    switch(e.target.id) {
-        case 'ed-btn-1':
-            //Remuevo la clase actual de deseleccionado al boton 1
-            btnEducation1.classList.remove("deselected-btn-education")
-            //Le agrego la clase de seleccionado al boton 1
-            btnEducation1.classList.add("selected-btn-education")
-            //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
-            btnEducation2.classList.remove("selected-btn-education")
-            btnEducation2.classList.add("deselected-btn-education")
-            btnEducation3.classList.remove("selected-btn-education")
-            btnEducation3.classList.add("deselected-btn-education")
-            //Debo mostrar el primer div de education description
-            changeWhatDataIsShown(1);
-            break;
-        case 'ed-btn-2':
-            //Remuevo la clase actual de deseleccionado al boton 2
-            btnEducation2.classList.remove("deselected-btn-education")
-            //Le agrego la clase de seleccionado al boton 2
-            btnEducation2.classList.add("selected-btn-education")
-            //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
-            btnEducation3.classList.remove("selected-btn-education")
-            btnEducation3.classList.add("deselected-btn-education")
-            btnEducation1.classList.remove("selected-btn-education")
-            btnEducation1.classList.add("deselected-btn-education")
-            changeWhatDataIsShown(2);
-            break;
-        case 'ed-btn-3':
-            //Remuevo la clase actual de deseleccionado al boton 3
-            btnEducation3.classList.remove("deselected-btn-education")
-            //Le agrego la clase de seleccionado al boton 3
-            btnEducation3.classList.add("selected-btn-education")
-            //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 2
-            btnEducation2.classList.remove("selected-btn-education")
-            btnEducation2.classList.add("deselected-btn-education")
-            btnEducation1.classList.remove("selected-btn-education")
-            btnEducation1.classList.add("deselected-btn-education")
-            changeWhatDataIsShown(3);
-            break;
+    if(!window.matchMedia("(max-width: 768px)").matches) {//para pantallas mayores a 768
+        switch(e.target.id) {
+            case 'ed-btn-1':
+                //Remuevo la clase actual de deseleccionado al boton 1
+                btnEducation1.classList.remove("deselected-btn-education")
+                //Le agrego la clase de seleccionado al boton 1
+                btnEducation1.classList.add("selected-btn-education")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
+                btnEducation2.classList.remove("selected-btn-education")
+                btnEducation2.classList.add("deselected-btn-education")
+                btnEducation3.classList.remove("selected-btn-education")
+                btnEducation3.classList.add("deselected-btn-education")
+                //Debo mostrar el primer div de education description
+                changeWhatDataIsShown(1);
+                break;
+            case 'ed-btn-2':
+                //Remuevo la clase actual de deseleccionado al boton 2
+                btnEducation2.classList.remove("deselected-btn-education")
+                //Le agrego la clase de seleccionado al boton 2
+                btnEducation2.classList.add("selected-btn-education")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
+                btnEducation3.classList.remove("selected-btn-education")
+                btnEducation3.classList.add("deselected-btn-education")
+                btnEducation1.classList.remove("selected-btn-education")
+                btnEducation1.classList.add("deselected-btn-education")
+                changeWhatDataIsShown(2);
+                break;
+            case 'ed-btn-3':
+                //Remuevo la clase actual de deseleccionado al boton 3
+                btnEducation3.classList.remove("deselected-btn-education")
+                //Le agrego la clase de seleccionado al boton 3
+                btnEducation3.classList.add("selected-btn-education")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 2
+                btnEducation2.classList.remove("selected-btn-education")
+                btnEducation2.classList.add("deselected-btn-education")
+                btnEducation1.classList.remove("selected-btn-education")
+                btnEducation1.classList.add("deselected-btn-education")
+                changeWhatDataIsShown(3);
+                break;
+        }
+    }else{
+        switch(e.target.id) {
+            case 'ed-btn-1':
+                //Remuevo la clase actual de deseleccionado al boton 1
+                btnEducation1.classList.remove("deselected-btn-education-sm")
+                //Le agrego la clase de seleccionado al boton 1
+                btnEducation1.classList.add("selected-btn-education-sm")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
+                btnEducation2.classList.remove("selected-btn-education-sm")
+                btnEducation2.classList.add("deselected-btn-education-sm")
+                btnEducation3.classList.remove("selected-btn-education-sm")
+                btnEducation3.classList.add("deselected-btn-education-sm")
+                //Debo mostrar el primer div de education description-sm
+                changeWhatDataIsShown(1);
+                break;
+            case 'ed-btn-2':
+                //Remuevo la clase actual de deseleccionado al boton 2
+                btnEducation2.classList.remove("deselected-btn-education-sm")
+                //Le agrego la clase de seleccionado al boton 2
+                btnEducation2.classList.add("selected-btn-education-sm")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
+                btnEducation3.classList.remove("selected-btn-education-sm")
+                btnEducation3.classList.add("deselected-btn-education-sm")
+                btnEducation1.classList.remove("selected-btn-education-sm")
+                btnEducation1.classList.add("deselected-btn-education-sm")
+                changeWhatDataIsShown(2);
+                break;
+            case 'ed-btn-3':
+                //Remuevo la clase actual de deseleccionado al boton 3
+                btnEducation3.classList.remove("deselected-btn-education-sm")
+                //Le agrego la clase de seleccionado al boton 3
+                btnEducation3.classList.add("selected-btn-education-sm")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 2
+                btnEducation2.classList.remove("selected-btn-education-sm")
+                btnEducation2.classList.add("deselected-btn-education-sm")
+                btnEducation1.classList.remove("selected-btn-education-sm")
+                btnEducation1.classList.add("deselected-btn-education-sm")
+                changeWhatDataIsShown(3);
+                break;
+        }
     }
 }
 
 const modificandoElementoSeleccionadoExperience = (e) => {
     console.log(e.target.id);
-    switch(e.target.id) {
-        case 'exp-btn-1':
-            //Remuevo la clase actual de deseleccionado al boton 1
-            btnExperience1.classList.remove("deselected-btn-education")
-            //Le agrego la clase de seleccionado al boton 1
-            btnExperience1.classList.add("selected-btn-education")
-            //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
-            btnExperience2.classList.remove("selected-btn-education")
-            btnExperience2.classList.add("deselected-btn-education")
-            // btnExperience3.classList.remove("selected-btn-education")
-            // btnExperience3.classList.add("deselected-btn-education")
-            //Debo mostrar el primer div de education description
-            changeWhatDataIsShownAsExperience(1);
-            break;
-        case 'exp-btn-2':
-            //Remuevo la clase actual de deseleccionado al boton 2
-            btnExperience2.classList.remove("deselected-btn-education")
-            //Le agrego la clase de seleccionado al boton 2
-            btnExperience2.classList.add("selected-btn-education")
-            //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
-            // btnExperience3.classList.remove("selected-btn-education")
-            // btnExperience3.classList.add("deselected-btn-education")
-            btnExperience1.classList.remove("selected-btn-education")
-            btnExperience1.classList.add("deselected-btn-education")
-            changeWhatDataIsShownAsExperience(2);
-            break;
+    if(!window.matchMedia("(max-width: 768px)").matches) {//para pantallas mayores a 768
+        switch(e.target.id) {
+            case 'exp-btn-1':
+                //Remuevo la clase actual de deseleccionado al boton 1
+                btnExperience1.classList.remove("deselected-btn-education")
+                //Le agrego la clase de seleccionado al boton 1
+                btnExperience1.classList.add("selected-btn-education")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
+                btnExperience2.classList.remove("selected-btn-education")
+                btnExperience2.classList.add("deselected-btn-education")
+                // btnExperience3.classList.remove("selected-btn-education")
+                // btnExperience3.classList.add("deselected-btn-education")
+                //Debo mostrar el primer div de education description
+                changeWhatDataIsShownAsExperience(1);
+                break;
+            case 'exp-btn-2':
+                //Remuevo la clase actual de deseleccionado al boton 2
+                btnExperience2.classList.remove("deselected-btn-education")
+                //Le agrego la clase de seleccionado al boton 2
+                btnExperience2.classList.add("selected-btn-education")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
+                // btnExperience3.classList.remove("selected-btn-education")
+                // btnExperience3.classList.add("deselected-btn-education")
+                btnExperience1.classList.remove("selected-btn-education")
+                btnExperience1.classList.add("deselected-btn-education")
+                changeWhatDataIsShownAsExperience(2);
+                break;
+        }
+    }else{
+        switch(e.target.id) {
+            case 'exp-btn-1':
+                //Remuevo la clase actual de deseleccionado al boton 1
+                btnExperience1.classList.remove("deselected-btn-education-sm")
+                //Le agrego la clase de seleccionado al boton 1
+                btnExperience1.classList.add("selected-btn-education-sm")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 2 y al 3
+                btnExperience2.classList.remove("selected-btn-education-sm")
+                btnExperience2.classList.add("deselected-btn-education-sm")
+                // btnExperience3.classList.remove("selected-btn-education")
+                // btnExperience3.classList.add("deselected-btn-education")
+                //Debo mostrar el primer div de education description
+                changeWhatDataIsShownAsExperience(1);
+                break;
+            case 'exp-btn-2':
+                //Remuevo la clase actual de deseleccionado al boton 2
+                btnExperience2.classList.remove("deselected-btn-education-sm")
+                //Le agrego la clase de seleccionado al boton 2
+                btnExperience2.classList.add("selected-btn-education-sm")
+                //Remuevo el seleccionado y Coloco la clase deseleccionado a los boton 1 y al 3
+                // btnExperience3.classList.remove("selected-btn-education")
+                // btnExperience3.classList.add("deselected-btn-education")
+                btnExperience1.classList.remove("selected-btn-education-sm")
+                btnExperience1.classList.add("deselected-btn-education-sm")
+                changeWhatDataIsShownAsExperience(2);
+                break;
+        }
     }
 }
 
@@ -224,9 +298,28 @@ const scrollingDirectionDetect = () => { // or window.addEventListener("scroll".
     }
     lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
  }
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
-window.addEventListener("scroll", debounce(scrollingDirectionDetect, 250));
+ //Botton hamburguesa
+ let menuClickReminder = false;
+const mostrarMenu = () => {
+    console.log("Apretaste el menu");
+    //modificamos de true a false o de false a true
+    menuClickReminder = !menuClickReminder;
+    //tenes que mostrar el logo de cerrar menu
+    if(menuClickReminder){//Muestro el logo de cerrar menu
+        menu.setAttribute('class', 'fas fa-times');
+        //Mostrar el nav y modifica estilo
+        nav.setAttribute('class', 'd-block nav justify-content-end align-items-center nav-styles-sm')
+    }else{//Muestro el logo de abrir menu
+        menu.setAttribute('class', 'fas fa-bars');
+        nav.setAttribute('class', 'no-mostrar')
+    }
+}
 
+menu.addEventListener('click', mostrarMenu)
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+if(!window.matchMedia("(max-width: 768px)").matches) {//para pantallas mayores a 768    
+    window.addEventListener("scroll", debounce(scrollingDirectionDetect, 250));
+}
 btnEducation1.addEventListener('click', modificandoElementoSeleccionado);
 btnEducation2.addEventListener('click', modificandoElementoSeleccionado);
 btnEducation3.addEventListener('click', modificandoElementoSeleccionado);
