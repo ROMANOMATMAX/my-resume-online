@@ -688,7 +688,12 @@ img {
 }
 
 .square-2 {
-    transform: translate(0, 30px) rotate(-9deg);
+    background: linear-gradient( 
+90deg
+ , rgba(2,0,36,1) 0%, rgba(10,25,47,0.8384395994726015) 0%, rgba(0,212,255,1) 100%);
+ transform: translate(0, 80px) rotate(
+    -9deg
+    );
     background: #64ffda;
     height: 40vh;
     width: 200%;
@@ -1557,12 +1562,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container-img-card:hover > .details {
-    width: 100%;
-    left: 0;
+    width: 90%;
+    left: 5%;
 }
 
 .details{
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); */
     margin: 0;
     list-style: none;
     position: absolute;
@@ -1571,8 +1576,9 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
     margin: auto;
     transition: left .3s;
-    background: #000;
-    opacity: 0.6;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,25,47,0.8384395994726015) 50%, rgba(0,212,255,1) 100%);
+    opacity: 0.9;
     color: #fff;
     padding: 10px;
     width: 0;
@@ -1589,15 +1595,16 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 .table-img-container {
-    height: 250px;
-    width: 300px;
+    /* height: 250px; */
+    margin: 0 auto;
+    width: 90%; 
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: transform .2s;
-    clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+    /* clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%); */
 }
 .table-img-styles {
     height: 100%;
