@@ -378,6 +378,21 @@ menu.addEventListener('click', mostrarMenu)
 if(!window.matchMedia("(max-width: 768px)").matches) {//para pantallas mayores a 768    
     window.addEventListener("scroll", debounce(scrollingDirectionDetect, 250));
 }
+
+const formularioContactoSubmit = (event)  => {
+    event.preventDefault();
+    const msjError = document.getElementById('msj-submit');
+    console.log("estas enviando el correo");
+    msjError.innerHTML="Gracias por tu mensaje!!"
+    msjError.setAttribute('class', 'alert alert-success');
+        setTimeout(()=>{
+            msjError.setAttribute('class', 'd-none')
+            const btnClose = document.getElementById('close-form-contact');
+    btnClose.click();
+        }, 1000);
+}
+
+
 btnEducation1.addEventListener('click', modificandoElementoSeleccionado);
 btnEducation2.addEventListener('click', modificandoElementoSeleccionado);
 btnEducation3.addEventListener('click', modificandoElementoSeleccionado);

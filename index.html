@@ -204,7 +204,7 @@
                 <div id="experience-data-1" class="show-education-information">
                     <div>
                         <h3 class="gray-white-color">QC Analyst</h3>
-                        <p class="blue-color">NOV 2019 - APR 2020</p>
+                        <p class="green-color">NOV 2019 - APR 2020</p>
                         <p class="gray-darker-color letter-styles">My main role was to test server side of
                             an application using postman, check
                             data storage on Google Gloud Platform
@@ -215,7 +215,7 @@
                 <div id="experience-data-2" class="hide-education-information">
                     <div>
                         <h3 class="gray-white-color">Assistant Professor</h3>
-                        <p class="blue-color">JUN 2017 - JUN 2018</p>
+                        <p class="green-color">JUN 2017 - JUN 2018</p>
                         <p class="gray-darker-color letter-styles">My role was to teach Electrical Material
                             and Electronic Devices subjects</p>
                     </div>
@@ -339,31 +339,34 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content cambio-bg">
-        <button type="button" class="btn-close posicion-boton-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button id="close-form-contact" type="button" class="btn-close posicion-boton-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <div class="modal-body modal-spacing">
-          <form action="">
+          <form action="" onsubmit="formularioContactoSubmit(event)">
             <h2 class="text-dark">Let's talk</h2>
             <p>I will get back to you within one to two days through email. Also please don't forget to check your spam account just in case!</p>
+            <div id="msj-submit" class="alert alert-danger d-none" role="alert">
+              A simple danger alert—check it out!
+            </div>
             <div class="form-input-container">
                 <label for="floatingInput">Name</label>
-                <input type="text" class="" id="" placeholder="">
+                <input type="text" class="" id="" placeholder="" required>
             </div>
             <div class="form-input-container">
                 <label for="">Email</label>
-                <input type="email" class="" id="" placeholder="">
+                <input type="email" class="" id="" placeholder="" required>
             </div>
             <div class="form-input-container">
                 <label for="">Subject</label>
-                <input type="text" class="" id="" placeholder="">
+                <input type="text" class="" id="" placeholder="" required>
             </div>
             <div class="form-input-container">
                 <label for="">Message</label>
-                <textarea name="message" id="" cols="50" rows="5" class="estilos-text-area"></textarea>
+                <textarea name="message" id="" cols="50" rows="5" class="estilos-text-area" required></textarea>
+            </div>
+            <div class="modal-footer justify-content-center">
+              <button type="" class="btn btn-danger w-100">Send request</button>
             </div>
           </form>
-        </div>
-        <div class="modal-footer justify-content-center">
-          <button type="button" class="btn btn-danger w-100">Send request</button>
         </div>
       </div>
     </div>
