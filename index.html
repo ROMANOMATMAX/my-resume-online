@@ -1,85 +1,398 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <title>My curriculum</title>
-  </head>
-  <body class="fullscreen background-radial-gradient">
-    <header>
+</head>
+<body class="body-about-me" style="overflow:auto;">
+    <header id= "header-tag" class="width:100% modify-background">
         <div>
-            <img src="../img/logo.png" alt="logo" class="w-100">
+            <img src="./img/logo-page.png" alt="logo" class="w-100">
         </div> 
         <ul id="nav-list" class="nav justify-content-end align-items-center">
-            <li class="nav-item pe-3 order-number-style">
-              <a class="nav-link active color-gray-white" aria-current="page" href="#">Active</a>
+            <li class="nav-item pe-3 order-number-style mover-link-1">
+              <a id="top-opcion-1" class="nav-link active color-gray-white" aria-current="page" href="#skill-set">Skill set</a>
             </li>
-            <li class="nav-item pe-3 order-number-style">
-              <a class="nav-link color-gray-white" href="#">Link</a>
+            <li class="nav-item pe-3 order-number-style mover-link-2">
+              <a id="top-opcion-2" class="nav-link color-gray-white" href="#about-me-section">About me</a>
             </li>
-            <li class="nav-item pe-3 order-number-style">
-              <a class="nav-link color-gray-white" href="#">Link</a>
+            <li class="nav-item pe-3 order-number-style mover-link-3">
+              <a id="top-opcion-3"  class="nav-link color-gray-white" href="#study-section">Education</a>
             </li>
-            <li class="nav-item pe-3 order-number-style">
-              <a class="nav-link color-gray-white" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <li class="nav-item pe-3 order-number-style mover-link-4">
+              <a id="top-opcion-4"  class="nav-link color-gray-white" href="#work-section" tabindex="-1" aria-disabled="true">Experience</a>
             </li>
-            <li class="pe-3">
-                <button class="button-costumized">Resume</button>
+            <li class="nav-item pe-3 order-number-style mover-link-5">
+                <a id="top-opcion-5"  class="nav-link color-gray-white" href="#project-section" tabindex="-1" aria-disabled="true">Projects</a>
+            </li>
+            <li class="mt-4 mt-md-0 nav-item pe-3 mover-link-6">
+                <a class="button-costumized green-color text-decoration-none" href="./Matias Romano Full Stack Web Developer-about-me-changed.pdf" download="resume.pdf">resume</a>
             </li>
         </ul>
         <div id="hamb-logo">
           <i id="menu" class="fas fa-bars"></i>
         </div>
     </header>
-    <!-- Elementos de la seccion 1 -->
-    <section id="section-1" class="move-inside-window">
-      <h1 class="text-white font-size-title">MATIAS ROMANO</h1>
+    <div class="contact-btn-fixed move-outside-window-btn-talk">
+        <button id="contact-btn" class="appear-disappear-btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="far fa-envelope"></i></button>
+    </div>
+    <section id="first-section" style="overflow:hidden;" class="prueba-bg" style="transition-delay: 100ms;">
+        <img src="./img/hero-pattern-bg-lg.png" alt="" class="altura-imagen-primer-seccion">
+        <img src="./img/hero-guy-1.png" alt="">
+        <div class="presentation-bg">
+            <div>
+                <div class="card-animation-y-delay-1  my-md-3">
+                    <h2 class="mx-5 big-heading">Matias Romano</h2>
+                </div>
+                <div class="card-animation-y-delay-2  my-md-5" style="transition-delay: 200ms;">
+                    <h3 class="mx-5 color-azul-oscuro"> Full Stack Web Developer enthusiastic and oriented to Frontend development with ReactJS focused on building exceptional digital experiences</h3>
+                </div>
+            </div>
+        </div>
     </section>
-    <div id="img-section-1" class="move-inside-window-img">
-      <img src="../img/moon.svg" alt="" class="w-100">
-      <p class="portfolio-title-style font-color-red">PORTFOLIO</p>
+    <section id="skill-set" style="overflow:hidden;" class="mx-1 mx-md-5 mt-2" style="transition-delay: 100ms;">
+        <div class="mx-md-5">
+            <div class="mx-md-5">
+                <h2 class="ps-5 ps-md-0 mx-md-5 text-sm-center  numbered-heading-section">Skills set</h2>
+            </div>
+        </div>
+        <div class="container-skills-and-photo my-0 my-md-5">
+            <div id="skills-section" class="skills">
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div id="barra-1" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-2" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-Bootstrap-563D7C?style=flat&logo=bootstrap&logoColor=white" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-3" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-JavaScript-eed718?style=flat&logo=javascript&logoColor=ffffff" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-4" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-Sass-cc6699?style=flat&logo=sass&logoColor=ffffff" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-5" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-React-000000?style=flat&logo=react&logoColor=00c8ff
+                        " alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-6" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-MySQL-F29111?style=flat&logo=mysql&logoColor=FFFFFF" alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-7" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+                <div class="bar-container">
+                    <div class="logo-tool-container">
+                        <img src="https://img.shields.io/badge/-MongoDB-4DB33D?style=flat&logo=mongodb&logoColor=FFFFFF
+                        " alt="" class="w-auto">
+                    </div>
+                    <div class="load-bar-border">
+                        <div  id="barra-8" class='fill-color' style="height:7px;width:25%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-me-section"class="mx-2 mx-md-5 mt-0 mt-md-2 card-animation">
+        <div class="about-me-bg-lg seccion-animada-y">
+            <div class="about-me-data-lg mx-0 mx-md-5 my-0 my-md-5">
+                <h2 class="numbered-heading-section">About Me</h2>
+                <p class="gray-darker-color letter-styles">I am a full stack web developer. My first approach to programming was at college and I was amazed. Then, in a self-taught way, I kept learning since I found in programming a place where I could fully exploit my desire to learn and my discipline. I decided to make this passion my profession so I took a full stack web developer training at Acamica to be able to finish my learning process. Currently I am looking for my first job as a developer and I keep learning and working on my personal projects daily.</p>
+            </div>
+        </div>
+    </section>
+    <section class="mx-5 mt-0 mt-md-5 mt-md-2 card-animation">
+        <div class="card-animation">
+            <span class="perfil-img-animation tag-1 tag-html-animation"><i class="fas fa-code"></i></span>
+            <span class="perfil-img-animation tag-2 tag-html-animation" style="animation-delay: 1700ms;"><i class="fab fa-react"></i></span>
+            <span class="perfil-img-animation tag-3 tag-html-animation" style="animation-delay: 1700ms;"><i class="fab fa-css3"></i></span>
+            <span class="perfil-img-animation tag-4 tag-html-animation" style="animation-delay: 1900ms;"><i class="fab fa-node-js"></i></span>
+            <span class="perfil-img-animation tag-5 tag-html-animation" style="animation-delay: 2100ms;"><i class="fas fa-server"></i></span>
+            <span class="perfil-img-animation tag-6 tag-html-animation" style="animation-delay: 2300ms;"><i class="fab fa-bootstrap"></i></i></span>
+            <span class="perfil-img-animation tag-7 tag-html-animation" style="animation-delay: 2500ms;"><i class="fab fa-npm"></i></span>
+            <span class="perfil-img-animation tag-8 tag-html-animation" style="animation-delay: 2700ms;"><i class="fab fa-git-alt"></i></span>
+            <div class="photo">
+                <img id="dev-img" src="./img/fotoPerfil.png" alt="" class="adaptar-imagen-dev">
+            </div>
+        </div>
+    </section>
+    <!-- Education section -->
+    <section id="study-section" style="overflow:hidden;" class="mx.2 mx-md-5 mt-5 seccion-animada-y">
+        <div class="center-content">
+            <h2 class="ps-5 ps-md-0 mx-md-5 text-sm-center  numbered-heading-section-2">Where I've studied</h2>
+            <div class="education-container my-5 mx-5">
+                <div class="education-button-container pe-4">
+                    <button id="ed-btn-1" class="d-block btn-education selected-btn-education letter-styles">Acamica</button>
+                    <button id="ed-btn-2" class="d-block btn-education letter-styles">Ingeniería electrónica</button>
+                    <button id="ed-btn-3" class="d-block btn-education letter-styles">Globant Bootcamp QC</button>
+                </div>
+                <div id="education-data-1" class="show-education-information">
+                    <div>
+                        <h3 class="gray-white-color">Acámica</h3>
+                        <p class="green-color">OCT 2020 - APR 2021</p>
+                        <p class="gray-darker-color letter-styles">Certificate in Full Stack Web Development</p>
+                    </div>
+                </div>
+                <div id="education-data-2" class="hide-education-information">
+                    <div>
+                        <h3 class="gray-white-color">Universidad Nacional de Tucuman</h3>
+                        <p class="green-color">MAR 2019 - OCT 2019</p>
+                        <p class="gray-darker-color letter-styles">Electronic Engineering</p>
+                    </div>
+                </div>
+                <div id="education-data-3" class="hide-education-information">
+                    <div>
+                        <h3 class="gray-white-color">Globant</h3>
+                        <p class="green-color">AUG 2019 - OCT 2019</p>
+                        <p class="gray-darker-color letter-styles">Bootcamp QC Analyst</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Experience section -->
+    <section id="work-section" class="seccion-animada-y mx-2 mx-md-5 my-3 work-experience-bg">
+        <div class="center-content">
+            <h2 class="ps-5 ps-md-0 mx-md-5 text-sm-center numbered-heading-section-3">Where I've worked</h2>
+            <div class="work-experience-container my-5 mx-5">
+                <div class="work-experience-button-container pe-4">
+                    <button id="exp-btn-1" class="d-block btn-education selected-btn-education letter-styles">Globant</button>
+                    <button id="exp-btn-2" class="d-block btn-education letter-styles">Universidad Nacional de Tucuman</button>
+                </div>
+                <div id="experience-data-1" class="show-education-information">
+                    <div>
+                        <h3 class="gray-white-color">QC Analyst</h3>
+                        <p class="blue-color">NOV 2019 - APR 2020</p>
+                        <p class="gray-darker-color letter-styles">My main role was to test server side of
+                            an application using postman, check
+                            data storage on Google Gloud Platform
+                            and also I had to write and execute test
+                            cases.</p>
+                    </div>
+                </div>
+                <div id="experience-data-2" class="hide-education-information">
+                    <div>
+                        <h3 class="gray-white-color">Assistant Professor</h3>
+                        <p class="blue-color">JUN 2017 - JUN 2018</p>
+                        <p class="gray-darker-color letter-styles">My role was to teach Electrical Material
+                            and Electronic Devices subjects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project-section" class="mx-2 mx-md-5 my-3 seccion-animada-y center-content">
+        <h2 class="ps-5 ps-md-0 mx-md-5 text-sm-center numbered-heading-section-4">Some Things I've built</h2>
+        <div class="projects-section-styles">
+            <div class="container-img-card position-relative my-5">
+                <div class="table-img-container"><a href="javascript:void(0);" class="h-100"><img src="./img/proy1acamica.png" class="table-img-styles" alt=""></a></div>
+                <ul class="details">
+                    <div class="project-content"> 
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="">Podcast Channel</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>The challenge is focused on the layout of the landing page of a Podcast channel, following the visual guides of a user interface provided and developing functionalities of content playback, navigation, compatibility with multiple browsers and devices.</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SASS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ROMANOMATMAX/PROYECTO-1" target="a_blank"><i class="fab fa-github-square"></i></a>
+                                <a href="https://suspicious-roentgen-ee218b.netlify.app/" target="a_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="container-img-card position-relative my-5">
+                <div class="table-img-container"><a href="javascript:void(0);" class="h-100"><img src="./img/proy1rollingcode.png" class="table-img-styles" alt=""></a></div>
+                <ul class="details">
+                    <div class="project-content"> 
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="">Travel World</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>This project was developed to apply the acquired knowledge of css, html and bootstrap</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ROMANOMATMAX/proyectoUnoBootstrapRC" target="a_blank"><i class="fab fa-github-square"></i></a>
+                                <a href="https://cocky-payne-3443cb.netlify.app/" target="a_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+            <div class="container-img-card position-relative my-5">
+                <div class="table-img-container"><a href="javascript:void(0);" class="h-100"><img src="./img/proy4acamica.png" class="table-img-styles" alt=""></a></div>
+                <ul class="details">
+                    <div class="project-content"> 
+                        <div>
+                            <p class="project-overline">Featured Project</p>
+                            <h3 class="project-title">
+                                <a href="">Datawarehouse</a>
+                            </h3>
+                            <div class="project-description">
+                                <p>Creation of a web application that allows a Marketing company to manage all the contacts of its clients for their campaigns. Working both server side (NodeJS) and client side (ReactJS)</p>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>React</li>
+                                <li>NodeJS</li>
+                                <li>Express</li>
+                                <li>Spotify Web Api</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/ROMANOMATMAX/proyecto-acamica-4" target="a_blank"><i class="fab fa-github-square"></i></a>
+                                <a href="https://github.com/ROMANOMATMAX/proyecto-acamica-4-server" target="a_blank"><i class="fab fa-github-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    </ul>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer class="gray-white-color footer-styles">
+        <div class="d-md-none btn-to-open-menu-container d-flex justify-content-center align-items-center btn-to-top">
+            <a id="to-menu" class="color-verde-claro" href="javascript:void(0)"><i id="menu-bottom" class="fas fa-bars"></i></a>
+        </div>
+        <div class="btn-to-top-container d-flex justify-content-center align-items-center btn-to-top">
+            <a id="up-btn" class="color-verde-claro" href="#first-section"><i class="far fa-caret-square-up"></i></a>
+        </div>
+        <div class="social-media">
+            <div class=""><a class="gray-white-color red-a" href="https://www.linkedin.com/in/romam132/" target="_blank"><i class="fab fa-linkedin"></i></a></div>
+            <div class=""><a class="gray-white-color red-a" href="https://www.instagram.com/romanomatias99/?hl=es"><i class="fab fa-instagram"></i></a></div>
+            <div class=""><a class="gray-white-color red-a" href="https://github.com/ROMANOMATMAX"><i class="fab fa-github"></i></a></div>
+        </div>
+        <div class="derechos-reservados text-center">
+            <div class="logo-footer-container">
+                <img src="./img/logo-page.png" alt="logo" class="w-100">
+            </div> 
+            <p class="m-0 text-size-pequeño color-azul-oscuro">&copy; Derechos Reservados</p>
+            <p class="m-0 text-size-pequeño color-azul-oscuro">Matias Romano</p>
+        </div>
+        <!-- <div class="square-2">
+
+        </div> -->
+    </footer>
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content cambio-bg">
+        <button type="button" class="btn-close posicion-boton-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-body modal-spacing">
+          <form action="">
+            <h2 class="text-dark">Let's talk</h2>
+            <p>I will get back to you within one to two days through email. Also please don't forget to check your spam account just in case!</p>
+            <div class="form-input-container">
+                <label for="floatingInput">Name</label>
+                <input type="text" class="" id="" placeholder="">
+            </div>
+            <div class="form-input-container">
+                <label for="">Email</label>
+                <input type="email" class="" id="" placeholder="">
+            </div>
+            <div class="form-input-container">
+                <label for="">Subject</label>
+                <input type="text" class="" id="" placeholder="">
+            </div>
+            <div class="form-input-container">
+                <label for="">Message</label>
+                <textarea name="message" id="" cols="50" rows="5" class="estilos-text-area"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-danger w-100">Send request</button>
+        </div>
+      </div>
     </div>
-    <div id="img-cloud-section-1" class="move-der-izq-cloud">
-      <img src="../img/b_cloud01.svg" alt="" class="w-100">
-    </div>
-    <div id="img-cloud-section-2" class="move-der-izq-cloud">
-      <img src="../img/b_cloud02.svg" alt="" class="w-100">
-    </div>
-    <div id="img-cloud-section-3" class="move-der-izq-cloud">
-      <img src="../img/cloud1.svg" alt="" class="w-100">
-    </div>
-    <div id="img-cloud-section-4" class="move-der-izq-cloud">
-      <img src="../img/cloud2.svg" alt="" class="w-100">
-    </div>
-    <div id="img-cloud-section-5" class="move-der-izq-cloud">
-      <img src="../img/cloud3.svg" alt="" class="w-100">
-    </div>
-    <div id="number-section-1" class="move-inside-window-number">
-      <p class="text-white">01</p>
-    </div>
-    <div id="btn-description-section-1" class="move-inside-window-btn">
-      <p class="text-white font-size-subtitle">Full Stack Web Developer</p>
-      <a class="btn btn-danger" href="./html/portfolio.html">Ver Mas 2</a>
-    </div>
-    <!-- Optional JavaScript; choose one of the two! -->
-    <button id="btnMoveSection2" class="d-none"><i class="fas fa-chevron-up"></i></button>
-    <button id="btnMoveSection1" class="move-btn-scroll-down-up appear-disappear-btn"><i class="fas fa-chevron-down"></i></button>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="../js/main.js"></script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
+  </div>
+  <ul id="menu-oculto" class="d-none">
+      <li class="nav-item pe-3 order-number-style mover-link-1">
+        <a id="bottom-option-1" class="nav-link active color-gray-white" aria-current="page" href="#skill-set">Skill set</a>
+      </li>
+      <li class="nav-item pe-3 order-number-style mover-link-2">
+        <a id="bottom-option-2" class="nav-link color-gray-white" href="#about-me-section">About me</a>
+      </li>
+      <li class="nav-item pe-3 order-number-style mover-link-3">
+        <a id="bottom-option-3"  class="nav-link color-gray-white" href="#study-section">Education</a>
+      </li>
+      <li class="nav-item pe-3 order-number-style mover-link-4">
+        <a id="bottom-option-4"  class="nav-link color-gray-white" href="#work-section" tabindex="-1" aria-disabled="true">Experience</a>
+      </li>
+      <li class="nav-item pe-3 order-number-style mover-link-5">
+          <a id="bottom-option-5"  class="nav-link color-gray-white" href="#project-section" tabindex="-1" aria-disabled="true">Projects</a>
+      </li>
+      <li class="mt-4 mt-md-0 nav-item pe-3 mover-link-6">
+        <a class="button-costumized green-color text-decoration-none" href="./Matias Romano Full Stack Web Developer-about-me-changed.pdf" download="resume.pdf">resume</a>
+    </li>
+      <div id="menu-bottom-dos" class="clase-adicional">
+        <i class="fas fa-times"></i>
+      </div>
+  </ul>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    <script src="./js/aboutMe.js"></script>
+</body>
 </html>
