@@ -423,6 +423,13 @@ header .color-gray-white {
     font-size: 12px;
     opacity: 0.7;
 }
+.project-number {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color:#64ffda;
+    font-size: 30px;
+}
 .modal-spacing {
     padding-top: 180px;
     padding-right: 2rem;
@@ -1886,6 +1893,13 @@ h2 {
     }
 }
 @media (max-width: 768px) {
+    .project-number {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #64ffda;
+        font-size: 18px;
+    }
     .hide-bottom-menu {
         list-style: none;
         background-image: linear-gradient(to right, #072142, #8c2b7a 42%, #ff4d5a);
